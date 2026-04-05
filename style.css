@@ -2,8 +2,9 @@
   --grey: #212121;
   --green: #009660;
   --white: #e9e9e9;
+  --black: #0c0c0c;
+  --lgrey: #535353;
 }
-
 @font-face {
   font-family: manrope;
   src: url("./Assests/fonts/manrope.woff2") format("woff2");
@@ -13,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: var(--white);
 }
 html,
 body {
@@ -83,6 +84,13 @@ nav {
   width: 25px;
   height: 25px;
 }
+.green{
+  color: var(--green);
+}
+.grey{
+  color: var(--lgrey);
+
+}
 
 @media (max-width: 600px) {
   nav {
@@ -101,10 +109,112 @@ nav {
     display: flex;
   }
 }
-
+main {
+  padding-top: 100px;
+}
 .section1 {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 100px 70px 0 70px;
+  padding: 0 70px;
+  font-family: manrope;
+}
+.section1 .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  /* background-color: aqua; */
+  width: 40%;
+}
+.section1 .left h1{
+  font-size: 45px;
+}
+.left .price{
+font-size: 32px;
+
+}
+
+.section1 .left .cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+ margin: 20px 0;
+}
+.cta button{
+  background-color: var(--green);
+  color: var(--white);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.cta button:nth-child(2){
+  background-color: var(--grey)
+}
+.section1 .left .tags {
+  display: flex;
+  align-items: center;
+  gap: 5px 5px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.section1 .left .tags h4 {
+  background-color: var(--grey);
+  padding: 10px 20px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.left .price .grey{
+
+  text-decoration: line-through;
+  font-size: 30px;
+}
+
+.section1 .right {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+ width:40%;
+}
+
+.section1 .right .right-in{
+  width: 100%;
+  max-width: 600px;
+border-radius: 5px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+overflow: hidden;
+}
+
+.section1 .right .right-in .image{
+  width: 100%;
+}
+.section1 .right .right-in .image img{
+  width: 100%;
+  display: block;
+}
+.section1 .right .right-in .image-bottom{
+  padding: 20px;
+  padding-top: 40;
+  background-color: var(--grey);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  
+}
+.right-in .image-bottom h4{
+  background-color: #151515;
+padding: 10px;
+width: 40%;
+padding: 10px 15px;
+border-radius: 5px;
+font-size: 13px;
 }
